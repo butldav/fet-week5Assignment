@@ -1,0 +1,9 @@
+.gameboard {
+    display: grid;
+    width: 40vw;
+    height: 40vh;
+}
+.gamecell {
+    height: 100%;
+    width: 100%;
+}
