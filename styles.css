@@ -1,9 +1,60 @@
-.gameboard {
-    display: grid;
-    width: 40vw;
-    height: 40vh;
+@font-face {
+    font-family: Cheveuxdange;
+    src: url(assets/fonts/Cheveuxdange.ttf);
+}
+* {
+    box-sizing: border-box;
+}
+h1#title {
+    font-family: Cheveuxdange;
+    font-size: 3em;
+}
+h2#playerBanner { 
+    font-family: Cheveuxdange;
+    font-size: 2em;
+    font-weight: bold;
+    color: maroon;
+}
+#gameContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#gameBoard {
+    display: flex;
+    width: 600px;
+    flex-wrap: wrap;
+
 }
 .gamecell {
     height: 100%;
     width: 100%;
+}
+
+#cellA1, #cellA2, #cellA3, #cellB1, #cellB2, #cellB3, #cellC1, #cellC2, #cellC3 {
+    font-size: 56px;
+}
+
+.cell {
+    
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Cheveuxdange;
+    font-size: 7rem;
+}
+.cell:nth-child(3n+0) { 
+    border-left: 3px solid grey;
+}
+.cell:nth-child(3n+1) { 
+    border-right: 3px solid grey;
+}
+.cell:nth-child(-n+3) { 
+    border-bottom: 3px solid grey;
+}
+.cell:nth-child(n+7) {
+    border-top: 3px solid grey;
 }

@@ -7,40 +7,45 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="styles.css">
     <title>Tic Tac Toe!</title>
-    <style>
-        #cellA1, #cellA2, #cellA3, #cellB1, #cellB2, #cellB3, #cellC1, #cellC2, #cellC3 {
-            font-size: 56px;
-        }
-    </style>
 </head>
 <body>
-    <div class="container-xs">
-        <div class="row">
-            <div class="col-xs-3"></div>
-            <div class="col-xs-6 border d-flex justify-content-center">
-                <div class="gameboard">
-                    <div class="row">
-                        <div class="col-4 border d-flex justify-content-center align-self-center cell" id="cellA1"><p>X</p></div>
-                        <div class="col-4 border d-flex justify-content-center align-self-center cell" id="cellA2"><p>O</p></div>
-                        <div class="col-4 border d-flex justify-content-center align-self-center cell" id="cellA3"><p>X</p></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 border d-flex justify-content-center align-self-center cell" id="cellB1"><p>O</p></div>
-                        <div class="col-4 border d-flex justify-content-center align-self-center cell" id="cellB2"><p>X</p></div>
-                        <div class="col-4 border d-flex justify-content-center align-self-center cell" id="cellB3"><p>O</p></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 border d-flex justify-content-center align-self-center cell" id="cellC1"><p>X</p></div>
-                        <div class="col-4 border d-flex justify-content-center align-self-center cell" id="cellC2"><p>O</p></div>
-                        <div class="col-4 border d-flex justify-content-center align-self-center cell" id="cellC3"><p>X</p></div>
-                    </div>
+    <div id="gameContainer">
+                <h1 id="title">Tic Tac Toe</h1>
+                <h2 id="playerBanner"></h2>
+                <div id="gameBoard">
+                    <div class="cell" id="cell0">X</div>
+                    <div class="cell" id="cell1">O</div>
+                    <div class="cell" id="cell2">X</div>
+                    <div class="cell" id="cell3">O</div>
+                    <div class="cell" id="cell4">X</div>
+                    <div class="cell" id="cell5">O</div>
+                    <div class="cell" id="cell6">X</div>
+                    <div class="cell" id="cell7">O</div>
+                    <div class="cell" id="cell8">X</div>
                 </div>
-            </div>
-            
-            <div class="col-xs-3"></div>
-        </div>
+                <button id="restart" class="btn btn-primary">Start Game</button>
+
     </div>
+    <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="winHeader">Winner!</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="winnerModal">
+              <p>Player wins!</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" id="playAgain">Play Again</button>
+            </div>
+          </div>
+        </div>
+      </div>      
+    
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
     <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
